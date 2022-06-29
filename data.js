@@ -20,11 +20,11 @@ const searchIncludes = (event) => {
     const idx = dataArr.filter(item => {
       return item.Caption.includes(text)
     })
-    console.log(idx.length) // idx 是過濾過後的陣列
+    // console.log(idx.length) // idx 是過濾過後的陣列
     if (idx.length <= 12) {
       const bubbles = idx.map(activity => {
         const bubble = JSON.parse(JSON.stringify(template))
-        bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/iiQvQii/linebot/master/img/logo.png')
+        bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/iiQvQii/Linebot-Cultural-Me/master/img/logo.png')
         bubble.hero.action.uri = (activity.WebsiteLink || 'https://google.com')
         bubble.body.contents[0].text = activity.Caption
         bubble.body.contents[1].contents[1].text = activity.StartDate.slice(0, 10)
@@ -80,7 +80,7 @@ const searchCategory = (event) => {
     if (randomArr.length === 12) {
       const bubbles = randomArr.map(activity => {
         const bubble = JSON.parse(JSON.stringify(template))
-        bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/iiQvQii/linebot/master/img/logo.png')
+        bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/iiQvQii/Linebot-Cultural-Me/master/img/logo.png')
         bubble.hero.action.uri = (activity.WebsiteLink || 'https://google.com')
         bubble.body.contents[0].text = activity.Caption
         bubble.body.contents[1].contents[1].text = activity.StartDate.slice(0, 10)
@@ -126,7 +126,7 @@ const searchFree = (event) => {
     if (randomArr.length === 12) {
       const bubbles = randomArr.map(activity => {
         const bubble = JSON.parse(JSON.stringify(template))
-        bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/iiQvQii/linebot/master/img/logo.png')
+        bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/iiQvQii/Linebot-Cultural-Me/master/img/logo.png')
         bubble.hero.action.uri = (activity.WebsiteLink || 'https://google.com')
         bubble.body.contents[0].text = activity.Caption
         bubble.body.contents[1].contents[1].text = activity.StartDate.slice(0, 10)
@@ -166,10 +166,10 @@ const searchArea = (event) => {
     })
     // <=12有幾筆顯示幾筆，不隨機
     if (idx.length <= 12) {
-      console.log(idx.length, 'idx.length')
+      // console.log(idx.length, 'idx.length')
       const bubbles = idx.map(activity => {
         const bubble = JSON.parse(JSON.stringify(template))
-        bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/wdaweb/js_clock-iiQvQii/master/img/preview.png')
+        bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/iiQvQii/Linebot-Cultural-Me/master/img/logo.png')
         bubble.hero.action.uri = (activity.WebsiteLink || 'https://google.com')
         bubble.body.contents[0].text = activity.Caption
         bubble.body.contents[1].contents[1].text = activity.StartDate.slice(0, 10)
@@ -197,10 +197,10 @@ const searchArea = (event) => {
         const random = Math.round(Math.random() * idx.length)
         randomArr.push(idx[random])
       }
-      console.log(randomArr.length)
+      // console.log(randomArr.length)
       const bubbles = randomArr.map(activity => {
         const bubble = JSON.parse(JSON.stringify(template))
-        bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/wdaweb/js_clock-iiQvQii/master/img/preview.png')
+        bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/iiQvQii/Linebot-Cultural-Me/master/img/logo.png')
         bubble.hero.action.uri = (activity.WebsiteLink || 'https://google.com')
         bubble.body.contents[0].text = activity.Caption
         bubble.body.contents[1].contents[1].text = activity.StartDate.slice(0, 10)
@@ -277,10 +277,10 @@ const delCollect = (event) => {
       return (item.Caption.includes(collectName)) && (item.SessionStartDate.includes(collectStartTime))
     })
     if (delIndex > -1) {
-      console.log(delIndex, 'delIndex')
+      // console.log(delIndex, 'delIndex')
       // 把delindex解構後從收藏夾移除
       collectArr.splice(delIndex, 1)
-      console.log(collectArr)
+      // console.log(collectArr)
       event.reply([
         {
           type: 'text', text: '已從收藏夾移除'
@@ -305,7 +305,7 @@ const showCollect = (event) => {
     if (collectArr.length > 0) {
       const bubbles = collectArr.map(activity => {
         const bubble = JSON.parse(JSON.stringify(template))
-        bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/iiQvQii/linebot/master/img/logo.png')
+        bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/iiQvQii/Linebot-Cultural-Me/master/img/logo.png')
         bubble.hero.action.uri = (activity.WebsiteLink || 'https://google.com')
         bubble.body.contents[0].text = activity.Caption
         bubble.body.contents[1].contents[1].text = activity.StartDate.slice(0, 10)
