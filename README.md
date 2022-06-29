@@ -1,5 +1,7 @@
 # Cultural Me 做個有文化的人
 ![image](https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/logo.png)
+## LINEBOT ID
+@636yfeek
 ## ⭐️搜尋規則
 ➡️1. 由活動名稱搜尋
 「查 達文西的notebook」可搜尋活動名稱包含「達文西的notebook」的活動。(注意有空白)
@@ -19,7 +21,7 @@
 下方圖文選單可查詢及移除已收藏活動。
 ![image](https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-collect.png)
 
-## 圖文選單
+## 圖文選單快捷鍵
 1. 搜尋規則
 2. 我的最愛
 3. 免費
