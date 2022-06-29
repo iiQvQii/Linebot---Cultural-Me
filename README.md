@@ -19,19 +19,20 @@
 
 <br>
 <img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-search.jpg" width="300"></img>
+點擊回覆訊息中的圖片連結可進入活動網站獲得更多資訊。
 
-## 我的最愛
+## 「我的收藏」功能
 - 新增:
-可透過搜尋過後將該筆活動新增至最愛。
+可透過搜尋過後將該筆活動新增至收藏，若該活動已被收藏過則回覆已被收藏。
 - 查詢、移除:
-下方圖文選單可查詢及移除已收藏活動。
+下方圖文選單可查詢已收藏活動，開啟收藏夾後可以移除該活動。
 <br>
 <img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-collect.jpg" width="300"></img>
 
 ## 圖文選單快捷鍵
 1. 搜尋規則
-2. 我的最愛
-3. 免費
+2. 我的收藏
+3. 免費 (不用錢的最棒)
 4. 臺北市 (私心快捷鍵)
 <br>
 <img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-menu.jpg" width="300"></img>
