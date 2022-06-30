@@ -3,9 +3,14 @@
 
 ### LINEBOT ID: @636yfeek
 <img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/qrcode.png" width="300"></img>
+
 ## 創作風格
 以鮮豔的 pixel art 風格為主視覺，傳達藝術多元豐富的色彩概念。
 ## 功能介紹
+### 搜尋畫面預覽
+| <img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-search.jpg" width="300"></img>  | - 點擊回覆訊息中的圖片連結可進入活動網站獲得更多資訊，若無提供網址則為google。
+- flex訊息提供使用者該活動的圖片、活動網址、活動名稱、活動檔期起訖日、該場次時間以及位置資訊。|
+
 ### ⭐️ 搜尋規則
 ➡️1. 由活動名稱搜尋
 「查 達文西的notebook」可搜尋活動名稱包含「達文西的notebook」的活動。(注意有空白)
@@ -29,10 +34,10 @@
 
 <br>
 
-### 搜尋畫面預覽
-<img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-search.jpg" width="300"></img>
-- 點擊回覆訊息中的圖片連結可進入活動網站獲得更多資訊，若無提供網址則為google。
-- flex訊息提供使用者該活動的圖片、活動網址、活動名稱、活動檔期起訖日、該場次時間以及位置資訊。
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 
 <img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-show-location.jpg" width="300"></img>
 <br>
