@@ -20,6 +20,9 @@
 ➡️4. 搜尋免費
 輸入「免費」或「什麼都有就是沒錢」可顯示隨機12筆免費文藝活動。
 
+➡️4. 離我最近
+輸入「離我最近」可顯示附近5公里內活動，至多12筆。
+
 <br>
 <img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-search.jpg" width="300"></img>
 點擊回覆訊息中的圖片連結可進入活動網站獲得更多資訊。
