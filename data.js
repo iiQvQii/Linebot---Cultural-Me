@@ -1,5 +1,6 @@
 import axios from 'axios'
 import template from './template.js'
+import distance from './distance.js'
 
 let randomArr = []
 const dataArr = []
@@ -21,7 +22,7 @@ const searchIncludes = (event) => {
       return item.Caption.includes(text)
     })
     // console.log(idx.length) // idx 是過濾過後的陣列
-    if (idx.length <= 12) {
+    if (idx.length <= 12 && idx.length > 0) {
       const bubbles = idx.map(activity => {
         const bubble = JSON.parse(JSON.stringify(template))
         bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/iiQvQii/Linebot-Cultural-Me/master/img/logo.png')
@@ -33,7 +34,8 @@ const searchIncludes = (event) => {
         bubble.body.contents[4].contents[1].text = activity.SessionEndDate.slice(0, 16)
         bubble.body.contents[5].contents[1].text = activity.TicketType
         bubble.body.contents[5].contents[2].text = (activity.TicketPrice || ' ')
-        bubble.footer.contents[0].action.text = `⭐️加入收藏 場次時間${activity.SessionStartDate.slice(0, 16)} ${activity.Caption}`
+        bubble.footer.contents[0].action.text = `📍顯示位置 ${activity.Caption}`
+        bubble.footer.contents[1].action.text = `⭐️加入收藏 場次時間${activity.SessionStartDate.slice(0, 16)} ${activity.Caption}`
         // console.log(activity)
         // console.log('bubbles有執行')
         return bubble
@@ -41,7 +43,7 @@ const searchIncludes = (event) => {
       event.reply([
         {
           type: 'flex',
-          altText: '共通課程',
+          altText: '文化快遞',
           contents: {
             type: 'carousel',
             contents: bubbles.slice(0, 12)
@@ -50,15 +52,14 @@ const searchIncludes = (event) => {
       ])
     } else if (idx.length > 12) {
       event.reply([
-        { type: 'text', text: '這個關鍵字找到的筆數有點多' },
-        { type: 'text', text: '請參考搜尋規則，換個關鍵字看看' }
+        { type: 'text', text: '這個關鍵字找到的筆數有點多...' },
+        { type: 'text', text: '請參考搜尋規則，換個關鍵字看看。' }
       ])
     } else if (idx.length === 0) {
       event.reply([
-        { type: 'text', text: '請參考搜尋規則，換個關鍵字看看' }
+        { type: 'text', text: '查無資料，再接再厲。' }
       ])
     }
-    console.log('這裡上面有問題，如果沒有找到會沒東西')
   } catch (error) {
     console.log(error, '發生錯誤')
   }
@@ -89,7 +90,8 @@ const searchCategory = (event) => {
         bubble.body.contents[4].contents[1].text = activity.SessionEndDate.slice(0, 16)
         bubble.body.contents[5].contents[1].text = activity.TicketType
         bubble.body.contents[5].contents[2].text = (activity.TicketPrice || ' ')
-        bubble.footer.contents[0].action.text = `⭐️加入收藏 場次時間${activity.SessionStartDate.slice(0, 16)} ${activity.Caption}`
+        bubble.footer.contents[0].action.text = `📍顯示位置 ${activity.Caption}`
+        bubble.footer.contents[1].action.text = `⭐️加入收藏 場次時間${activity.SessionStartDate.slice(0, 16)} ${activity.Caption}`
         // console.log(randomArr)
         // console.log('bubbles有執行')
         return bubble
@@ -97,7 +99,7 @@ const searchCategory = (event) => {
       event.reply([
         {
           type: 'flex',
-          altText: '共通課程',
+          altText: '文化快遞',
           contents: {
             type: 'carousel',
             contents: bubbles.slice(0, 12)
@@ -135,7 +137,8 @@ const searchFree = (event) => {
         bubble.body.contents[4].contents[1].text = activity.SessionEndDate.slice(0, 16)
         bubble.body.contents[5].contents[1].text = activity.TicketType
         bubble.body.contents[5].contents[2].text = (activity.TicketPrice || ' ')
-        bubble.footer.contents[0].action.text = `⭐️加入收藏 場次時間${activity.SessionStartDate.slice(0, 16)} ${activity.Caption}`
+        bubble.footer.contents[0].action.text = `📍顯示位置 ${activity.Caption}`
+        bubble.footer.contents[1].action.text = `⭐️加入收藏 場次時間${activity.SessionStartDate.slice(0, 16)} ${activity.Caption}`
         // console.log(randomArr)
         // console.log('bubbles有執行')
         return bubble
@@ -143,7 +146,7 @@ const searchFree = (event) => {
       event.reply([
         {
           type: 'flex',
-          altText: '共通課程',
+          altText: '文化快遞',
           contents: {
             type: 'carousel',
             contents: bubbles.slice(0, 12)
@@ -178,13 +181,14 @@ const searchArea = (event) => {
         bubble.body.contents[4].contents[1].text = activity.SessionEndDate.slice(0, 16)
         bubble.body.contents[5].contents[1].text = activity.TicketType
         bubble.body.contents[5].contents[2].text = (activity.TicketPrice || ' ')
-        bubble.footer.contents[0].action.text = `⭐️加入收藏 場次時間${activity.SessionStartDate.slice(0, 16)} ${activity.Caption}`
+        bubble.footer.contents[0].action.text = `📍顯示位置 ${activity.Caption}`
+        bubble.footer.contents[1].action.text = `⭐️加入收藏 場次時間${activity.SessionStartDate.slice(0, 16)} ${activity.Caption}`
         return bubble
       })
       event.reply([
         {
           type: 'flex',
-          altText: '共通課程',
+          altText: '文化快遞',
           contents: {
             type: 'carousel',
             contents: bubbles.slice(0, 12)
@@ -209,13 +213,14 @@ const searchArea = (event) => {
         bubble.body.contents[4].contents[1].text = activity.SessionEndDate.slice(0, 16)
         bubble.body.contents[5].contents[1].text = activity.TicketType
         bubble.body.contents[5].contents[2].text = (activity.TicketPrice || ' ')
-        bubble.footer.contents[0].action.text = `⭐️加入收藏 場次時間${activity.SessionStartDate.slice(0, 16)} ${activity.Caption}`
+        bubble.footer.contents[0].action.text = `📍顯示位置 ${activity.Caption}`
+        bubble.footer.contents[1].action.text = `⭐️加入收藏 場次時間${activity.SessionStartDate.slice(0, 16)} ${activity.Caption}`
         return bubble
       })
       event.reply([
         {
           type: 'flex',
-          altText: '共通課程',
+          altText: '文化快遞',
           contents: {
             type: 'carousel',
             contents: bubbles.slice(0, 12)
@@ -234,6 +239,38 @@ const searchArea = (event) => {
     console.log(error, 'searchArea錯誤')
   }
 }
+
+// 查位置訊息
+const showDistance = (event) => {
+  try {
+    const text = event.message.text.slice(7)
+    const idx = dataArr.filter(item => {
+      return item.Caption.includes(text)
+    })
+    // console.log(idx.length, idx)
+    if (idx[0].Latitude && idx[0].Longitude) {
+      event.reply([
+        {
+          type: 'location',
+          title: 'location',
+          address: (idx[0].City + idx[0].Area) || ('地址'),
+          latitude: idx[0].Latitude,
+          longitude: idx[0].Longitude
+        }
+      ])
+    } else {
+      event.reply([
+        {
+          type: 'text',
+          text: '此筆資料無位置訊息，請點選圖片至網站查詢詳細資訊。'
+        }
+      ])
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 // 加入收藏
 const collect = (event) => {
   try {
@@ -314,14 +351,15 @@ const showCollect = (event) => {
         bubble.body.contents[4].contents[1].text = activity.SessionEndDate.slice(0, 16)
         bubble.body.contents[5].contents[1].text = activity.TicketType
         bubble.body.contents[5].contents[2].text = (activity.TicketPrice || ' ')
-        bubble.footer.contents[0].action.label = '💔從我的收藏移除'
-        bubble.footer.contents[0].action.text = `💔移除收藏 場次時間${activity.SessionStartDate.slice(0, 16)} ${activity.Caption}`
+        bubble.footer.contents[0].action.text = `📍顯示位置 ${activity.Caption}`
+        bubble.footer.contents[1].action.label = '💔從我的收藏移除'
+        bubble.footer.contents[1].action.text = `💔移除收藏 場次時間${activity.SessionStartDate.slice(0, 16)} ${activity.Caption}`
         return bubble
       })
       event.reply([
         {
           type: 'flex',
-          altText: '共通課程',
+          altText: '文化快遞',
           contents: {
             type: 'carousel',
             contents: bubbles.slice(0, 12)
@@ -340,13 +378,92 @@ const showCollect = (event) => {
   }
 }
 
+const showLocation = (event) => {
+  event.reply([
+    {
+      type: 'text',
+      text: '等等回覆完要等我找一下喔！'
+    },
+    {
+      type: 'text',
+      text: '點擊下方橢圓按鈕告訴我你現在的位置吧！',
+      quickReply: {
+        items: [
+          {
+            type: 'action',
+            action: {
+              type: 'location',
+              label: '回覆我的位置訊息'
+            }
+          }
+        ]
+      }
+    }
+  ])
+}
+
+let nearArr = []
+// 收到使用者位置訊息後，計算距離
+const showNearby = (event) => {
+  // console.log(event)
+  const userLat = event.message.latitude
+  const userlong = event.message.longitude
+  for (let i = 0; i < dataArr.length; i++) {
+    const eventLat = dataArr[i].Latitude
+    const eventLong = dataArr[i].Longitude
+    const dist = distance(userLat, userlong, eventLat, eventLong, 'K')
+    // 如果距離小於五公里
+    if (dist <= 5) {
+      nearArr.push(dataArr[i])
+    }
+  }
+  if (nearArr.length > 0) {
+    const bubbles = nearArr.map(activity => {
+      const bubble = JSON.parse(JSON.stringify(template))
+      bubble.hero.url = (activity.ImageFile || 'https://raw.githubusercontent.com/iiQvQii/Linebot-Cultural-Me/master/img/logo.png')
+      bubble.hero.action.uri = (activity.WebsiteLink || 'https://google.com')
+      bubble.body.contents[0].text = activity.Caption
+      bubble.body.contents[1].contents[1].text = activity.StartDate.slice(0, 10)
+      bubble.body.contents[2].contents[1].text = activity.EndDate.slice(0, 10)
+      bubble.body.contents[3].contents[1].text = activity.SessionStartDate.slice(0, 16)
+      bubble.body.contents[4].contents[1].text = activity.SessionEndDate.slice(0, 16)
+      bubble.body.contents[5].contents[1].text = activity.TicketType
+      bubble.body.contents[5].contents[2].text = (activity.TicketPrice || ' ')
+      bubble.footer.contents[0].action.text = `📍顯示位置 ${activity.Caption}`
+      bubble.footer.contents[1].action.text = `⭐️加入收藏 場次時間${activity.SessionStartDate.slice(0, 16)} ${activity.Caption}`
+      return bubble
+    })
+    event.reply([
+      {
+        type: 'flex',
+        altText: '文化快遞',
+        contents: {
+          type: 'carousel',
+          contents: bubbles.slice(0, 12)
+        }
+      }
+    ])
+  } else {
+    event.reply([
+      {
+        type: 'text',
+        text: '附近5公里沒有資料'
+      }
+    ])
+  }
+  nearArr = []
+}
+
 export default {
   fetchData,
   searchIncludes,
   searchCategory,
   searchFree,
   searchArea,
+  showDistance,
   collect,
   showCollect,
-  delCollect
+  delCollect,
+  showNearby,
+  showLocation
 }

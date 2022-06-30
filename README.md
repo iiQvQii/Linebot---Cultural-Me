@@ -1,7 +1,8 @@
 # Cultural Me 做個有文化的人
-### LINEBOT ID: @636yfeek
 <img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/logo.png" width="500"></img>
 
+### LINEBOT ID: @636yfeek
+<img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/qrcode.png" width="300"></img>
 ## 創作風格
 以鮮豔的 pixel art 風格為主視覺，傳達藝術多元豐富的色彩概念。
 ## 功能介紹

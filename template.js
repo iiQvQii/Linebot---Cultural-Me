@@ -187,6 +187,14 @@ export default {
         type: 'button',
         action: {
           type: 'message',
+          label: '顯示位置📍',
+          text: '顯示位置 aaaaaa'
+        }
+      },
+      {
+        type: 'button',
+        action: {
+          type: 'message',
           label: '加到我的收藏❤️',
           text: '已加入收藏'
         }

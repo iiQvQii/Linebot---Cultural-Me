@@ -29,6 +29,10 @@ bot.on('message', event => {
       data.searchFree(event)
     } else if (event.message.text.startsWith('地點 ')) {
       data.searchArea(event)
+    } else if (event.message.text.startsWith('📍顯示位置 ')) {
+      data.showDistance(event)
+    } else if (event.message.text === '離我最近') {
+      data.showLocation(event)
     } else if (event.message.text.startsWith('⭐️加入收藏 ')) {
       data.collect(event)
     } else if (event.message.text.startsWith('💔移除收藏 ')) {
@@ -44,6 +48,8 @@ bot.on('message', event => {
         stickerId: '11825375'
       }])
     }
+  } else if (event.message.type === 'location') {
+    data.showNearby(event)
   }
 })
 
