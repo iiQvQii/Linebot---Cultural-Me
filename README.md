@@ -20,9 +20,11 @@
 ➡️4. 搜尋免費
 輸入「免費」或「什麼都有就是沒錢」可顯示隨機12筆免費文藝活動。
 
-➡️4. 離我最近
+➡️5. 離我最近
 輸入「離我最近」可顯示附近5公里內活動，至多12筆。
+<br>
 <img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-nearby.jpg" width="300"></img>
+<br>
 <img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-nearby-1.jpg" width="300"></img>
 
 <br>
@@ -33,6 +35,7 @@
 - flex訊息提供使用者該活動的圖片、活動網址、活動名稱、活動檔期起訖日、該場次時間以及位置資訊。
 
 <img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-show-location.jpg" width="300"></img>
+<br>
 點擊「📍顯示位置」可查詢該活動的地理位置，若查無，會顯示找不到。
 
 ### 「收藏」(共用中)
