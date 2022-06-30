@@ -22,26 +22,35 @@
 
 ➡️4. 離我最近
 輸入「離我最近」可顯示附近5公里內活動，至多12筆。
+<img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-nearby.jpg" width="300"></img>
+<img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-nearby-1.jpg" width="300"></img>
 
 <br>
-<img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-search.jpg" width="300"></img>
-點擊回覆訊息中的圖片連結可進入活動網站獲得更多資訊。
 
-### 「我的收藏」功能
+### 搜尋畫面預覽
+<img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-search.jpg" width="300"></img>
+- 點擊回覆訊息中的圖片連結可進入活動網站獲得更多資訊，若無提供網址則為google。
+- flex訊息提供使用者該活動的圖片、活動網址、活動名稱、活動檔期起訖日、該場次時間以及位置資訊。
+
+<img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-show-location.jpg" width="300"></img>
+點擊「📍顯示位置」可查詢該活動的地理位置，若查無，會顯示找不到。
+
+### 「收藏」(共用中)
 - 新增:
 可透過搜尋過後將該筆活動新增至收藏，若該活動已被收藏過則回覆已被收藏。
 - 查詢、移除:
 下方圖文選單可查詢已收藏活動，開啟收藏夾後可以移除該活動。
 <br>
-<img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-collect.jpg" width="300"></img>
 
 ### 圖文選單快捷鍵
-1. 搜尋規則
-2. 我的收藏
-3. 免費 (不用錢的最棒)
-4. 臺北市 (私心快捷鍵)
+1. 我的收藏
+2. 隨機
+3. 離我最近
+4. 搜尋規則
+5. 免費 (不用錢的最棒)
+6. 臺北市 (私心快捷鍵)
 <br>
-<img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/preview-menu.jpg" width="300"></img>
+<img src="https://github.com/iiQvQii/Linebot-Cultural-Me/blob/master/img/menu.png" width="300"></img>
 
 ### API 資料來源
 [政府開放資料平臺-文化快遞資訊](https://data.gov.tw/dataset/151940)
